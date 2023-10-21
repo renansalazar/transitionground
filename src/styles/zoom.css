@@ -1,0 +1,11 @@
+.zoom {
+  view-transition-name: zoom-transition;
+}
+
+::view-transition-old(zoom-transition) {
+  animation-duration: 2s;
+}
+
+::view-transition-new(zoom-transition) {
+  animation: zoom-in 2s ease-in-out 1 forwards;
+}

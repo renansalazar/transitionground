@@ -1,0 +1,11 @@
+.slideToLeft {
+  view-transition-name: slide-to-left-transition;
+}
+
+::view-transition-old(slide-to-left-transition) {
+  animation: slide-to-right 2s ease-in-out 1 forwards;
+}
+
+::view-transition-new(slide-to-left-transition) {
+  animation: slide-from-left 2s ease-in-out 1 forwards;
+}

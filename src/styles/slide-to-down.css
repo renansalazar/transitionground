@@ -1,0 +1,11 @@
+.slideToDown {
+  view-transition-name: slide-to-down-transition;
+}
+
+::view-transition-old(slide-to-down-transition) {
+  animation: slide-to-up 2s ease-in-out 1 forwards;
+}
+
+::view-transition-new(slide-to-down-transition) {
+  animation: slide-from-down 2s ease-in-out 1 forwards;
+}

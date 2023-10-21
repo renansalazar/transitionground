@@ -1,0 +1,11 @@
+.default {
+  view-transition-name: default-transition;
+}
+
+::view-transition-old(default-transition) {
+  animation-duration: 2s;
+}
+
+::view-transition-new(default-transition) {
+  animation-duration: 2s;
+}
