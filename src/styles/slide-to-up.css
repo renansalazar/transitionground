@@ -3,9 +3,9 @@
 }
 
 ::view-transition-old(slide-to-up-transition) {
-  animation: slide-to-down 2s ease-in-out 1 forwards;
+  animation: slide-to-down var(--timer-value) ease-in-out 1 forwards;
 }
 
 ::view-transition-new(slide-to-up-transition) {
-  animation: slide-from-up 2s ease-in-out 1 forwards;
+  animation: slide-from-up var(--timer-value) ease-in-out 1 forwards;
 }

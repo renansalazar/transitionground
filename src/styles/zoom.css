@@ -3,9 +3,9 @@
 }
 
 ::view-transition-old(zoom-transition) {
-  animation-duration: 2s;
+  animation-duration: var(--timer-value);
 }
 
 ::view-transition-new(zoom-transition) {
-  animation: zoom-in 2s ease-in-out 1 forwards;
+  animation: zoom-in var(--timer-value) ease-in-out 1 forwards;
 }

@@ -21,7 +21,7 @@ export function AnimatedLink({ href, animationName = 'default', children, classN
   return (
     <Link
       href={href}
-      onClick={() => {
+      onClick={(e) => {
         animatedRoute();
       }}
       className={className}

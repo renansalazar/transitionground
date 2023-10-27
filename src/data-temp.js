@@ -11,11 +11,11 @@ export const transitions = [
     }
     
     ::view-transition-old(default-transition) {
-      animation-duration: 2s;
+      animation-duration: <% timer /%>;
     }
     
     ::view-transition-new(default-transition) {
-      animation-duration: 2s;
+      animation-duration: <% timer /%>;
     }
     `
   },
@@ -31,11 +31,11 @@ export const transitions = [
     }
     
     ::view-transition-old(slide-to-right-transition) {
-      animation: slide-to-left 2s ease-in-out 1 forwards;
+      animation: slide-to-left <% timer /%> ease-in-out 1 forwards;
     }
     
     ::view-transition-new(slide-to-right-transition) {
-      animation: slide-from-right 2s ease-in-out 1 forwards;
+      animation: slide-from-right <% timer /%> ease-in-out 1 forwards;
     }
 
     @keyframes slide-to-left {
@@ -70,11 +70,11 @@ export const transitions = [
     }
     
     ::view-transition-old(slide-to-left-transition) {
-      animation: slide-to-right 2s ease-in-out 1 forwards;
+      animation: slide-to-right <% timer /%> ease-in-out 1 forwards;
     }
     
     ::view-transition-new(slide-to-left-transition) {
-      animation: slide-from-left 2s ease-in-out 1 forwards;
+      animation: slide-from-left <% timer /%> ease-in-out 1 forwards;
     }
 
     @keyframes slide-to-right {
@@ -108,11 +108,11 @@ export const transitions = [
     }
     
     ::view-transition-old(zoom-transition) {
-      animation-duration: 2s;
+      animation-duration: <% timer /%>;
     }
     
     ::view-transition-new(zoom-transition) {
-      animation: zoom-in 2s ease-in-out 1 forwards;
+      animation: zoom-in <% timer /%> ease-in-out 1 forwards;
     }
 
     @keyframes zoom-in {
@@ -132,11 +132,11 @@ export const transitions = [
     }
     
     ::view-transition-old(slide-to-down-transition) {
-      animation: slide-to-up 2s ease-in-out 1 forwards;
+      animation: slide-to-up <% timer /%> ease-in-out 1 forwards;
     }
     
     ::view-transition-new(slide-to-down-transition) {
-      animation: slide-from-up 2s ease-in-out 1 forwards;
+      animation: slide-from-up <% timer /%> ease-in-out 1 forwards;
     }
 
     @keyframes slide-to-up {
@@ -170,11 +170,11 @@ export const transitions = [
     }
     
     ::view-transition-old(slide-to-up-transition) {
-      animation: slide-to-down 2s ease-in-out 1 forwards;
+      animation: slide-to-down <% timer /%> ease-in-out 1 forwards;
     }
     
     ::view-transition-new(slide-to-up-transition) {
-      animation: slide-from-up 2s ease-in-out 1 forwards;
+      animation: slide-from-up <% timer /%> ease-in-out 1 forwards;
     }
 
     @keyframes slide-to-down {

@@ -20,7 +20,7 @@ export const Theme = () => {
   }
 
   return (
-    <div className="w-full flex justify-end max-w-4xl px-24">
+    <div className="w-full flex justify-end max-w-4xl px-3 sm:px-24">
       <div className="border rounded-xl bg-gray-500 overflow-hidden flex justify-between mt-3">
         <button onClick={() => handleClick('light-mode')} className="dark:bg-slate-200 bg-gray-500 px-1" title="Cambiar tema">🌞</button>
         <button onClick={() => handleClick('dark-mode')} className="bg-slate-200 dark:bg-gray-500 px-1" title="Cambiar tema">🌚</button>

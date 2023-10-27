@@ -3,9 +3,9 @@
 }
 
 ::view-transition-old(default-transition) {
-  animation-duration: 2s;
+  animation-duration: var(--timer-value);
 }
 
 ::view-transition-new(default-transition) {
-  animation-duration: 2s;
+  animation-duration: var(--timer-value);
 }
