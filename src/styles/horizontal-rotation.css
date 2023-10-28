@@ -1,0 +1,13 @@
+.horizontalRotation {
+  view-transition-name: horizontal-rotation-transition;
+}
+
+::view-transition-old(horizontal-rotation-transition) {
+  backface-visibility: hidden; 
+  animation: rotate-horizontal-to-back var(--timer-value) ease-in-out 1 forwards;
+}
+
+::view-transition-new(horizontal-rotation-transition) {
+  backface-visibility: hidden; 
+  animation: rotate-horizontal-from-back var(--timer-value) ease-in-out 1 forwards;
+}

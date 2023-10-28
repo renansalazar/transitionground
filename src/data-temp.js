@@ -3,7 +3,7 @@ export const transitions = [
     slug: 'default',
     name: 'Fade in(Default)',
     className: 'default',
-    color: 'bg-gradient-to-r from-cyan-500 to-blue-500',
+    type: 'page',
     image: '🥷',
     styles: `
     .default {
@@ -62,7 +62,7 @@ export const transitions = [
     slug: 'slide-to-left',
     name: 'Slide to left',
     animationName: 'slideToLeft',
-    color: 'bg-gradient-to-r from-violet-500 to-fuchsia-500',
+    type: 'page',
     image: '👈',
     styles: `
     .slideToLeft {
@@ -100,7 +100,7 @@ export const transitions = [
     slug: 'zoom',
     name: 'Zoom',
     animationName: 'zoom',
-    color: 'bg-gradient-to-r from-purple-500 to-pink-500',
+    type: 'page',
     image: '🔍',
     styles: `
     .zoom {
@@ -126,6 +126,7 @@ export const transitions = [
     name: 'Slide to down',
     animationName: 'slideToDown',
     image: '👇',
+    type: 'page',
     styles: `
     .slideToDown {
       view-transition-name: slide-to-down-transition;
@@ -162,7 +163,7 @@ export const transitions = [
     slug: 'slide-to-up',
     name: 'Slide to up',
     animationName: 'slideToUp',
-    color: 'sky',
+    type: 'page',
     image: '👆',
     styles: `
     .slideToUp {
@@ -195,5 +196,85 @@ export const transitions = [
       }
     }
     `
-  }
+  },
+  {
+    slug: 'horizontal-rotation',
+    name: 'Horizontal Rotation',
+    animationName: 'horizontalRotation',
+    type: 'page',
+    image: '🔁',
+    styles: `
+    .horizontalRotation {
+      view-transition-name: horizontal-rotation-transition;
+    }
+    
+    ::view-transition-old(horizontal-rotation-transition) {
+      backface-visibility: hidden; 
+      animation: rotate-horizontal-to-back <% timer /%> ease-in-out 1 forwards;
+    }
+    
+    ::view-transition-new(horizontal-rotation-transition) {
+      backface-visibility: hidden; 
+      animation: rotate-horizontal-from-back <% timer /%> ease-in-out 1 forwards;
+    }
+
+    @keyframes rotate-horizontal-to-back {
+      from {
+        transform: rotateY(0deg);
+      }
+      to {
+        transform: rotateY(180deg);
+      }
+    }
+    
+    @keyframes rotate-horizontal-from-back {
+      from {
+        transform: rotateY(-180deg);
+      }
+      to {
+        transform: rotateY(0deg);
+      }
+    }
+    `
+  },
+  {
+    slug: 'vertical-rotation',
+    name: 'Vertical Rotation',
+    animationName: 'verticalRotation',
+    type: 'page',
+    image: '🔃',
+    styles: `
+    .verticalRotation {
+      view-transition-name: vertical-rotation-transition;
+    }
+    
+    ::view-transition-old(vertical-rotation-transition) {
+      backface-visibility: hidden; 
+      animation: rotate-vertical-to-back <% timer /%> ease-in-out 1 forwards;
+    }
+    
+    ::view-transition-new(vertical-rotation-transition) {
+      backface-visibility: hidden; 
+      animation: rotate-vertical-from-back <% timer /%> ease-in-out 1 forwards;
+    }
+
+    @keyframes rotate-vertical-to-back {
+      from {
+        transform: rotateX(0deg);
+      }
+      to {
+        transform: rotateX(180deg);
+      }
+    }
+    
+    @keyframes rotate-vertical-from-back {
+      from {
+        transform: rotateX(-180deg);
+      }
+      to {
+        transform: rotateX(0deg);
+      }
+    }
+    `
+  },
 ]

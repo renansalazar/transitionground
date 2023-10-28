@@ -5,14 +5,14 @@ import { useRouter } from "next/navigation";
 export function AnimatedLink({ href, animationName = 'default', children, className='' }) {
   const router = useRouter()
   const animatedRoute = () => {
-    document.documentElement.classList.add(animationName)
     if (!document.startViewTransition) {
       return router.push(href);
     } else {
+      document.documentElement.classList.add(animationName)
       let viewTransition = document.startViewTransition(() => {
         router.push(href)
       })
-      viewTransition.finished.finally(() => {
+      viewTransition.finished.finally(() => {        
         document.documentElement.classList.remove(animationName)
       })
     }

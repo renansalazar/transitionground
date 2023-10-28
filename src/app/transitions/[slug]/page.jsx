@@ -7,7 +7,8 @@ export default function Transitions ({ params }) {
   return (
     <>
       <h3
-        className="mb-2 text-2xl font-medium leading-tight dark:text-gray-100">
+        className="mb-2 text-2xl font-medium leading-tight dark:text-gray-100"
+      >
         {animation.name}
       </h3>
       <p className='text-8xl'>{animation.image}</p>

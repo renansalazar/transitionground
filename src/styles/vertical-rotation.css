@@ -1,0 +1,13 @@
+.verticalRotation {
+  view-transition-name: vertical-rotation-transition;
+}
+
+::view-transition-old(vertical-rotation-transition) {
+  backface-visibility: hidden; 
+  animation: rotate-vertical-to-back var(--timer-value) ease-in-out 1 forwards;
+}
+
+::view-transition-new(vertical-rotation-transition) {
+  backface-visibility: hidden; 
+  animation: rotate-vertical-from-back var(--timer-value) ease-in-out 1 forwards;
+}

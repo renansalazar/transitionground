@@ -8,7 +8,7 @@ export function TransitionItem ({ item }) {
       <AnimatedLink
         href={`/transitions/${item.slug}`}
         animationName={item.animationName}
-        className='p-4 flex justify-center flex-col items-center'
+        className='p-4 flex justify-center flex-col items-center w-full'
       >
         <h5
           className="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
